@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+
+  ml-food:
+    container_name: ml-food
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    command: node index.js
