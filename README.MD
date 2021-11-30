@@ -20,6 +20,11 @@ To build the image:
 ```Bash
 $ docker-compose build [OPTIONS] PATH | URL | -
 ```
+<pre>
+Options:
+    --no-cache              Do not use cache when building the image.
+    -q, --quiet             Don't print anything to `STDOUT`.
+</pre>
 ___
 To start running the container:
 ```Bash
