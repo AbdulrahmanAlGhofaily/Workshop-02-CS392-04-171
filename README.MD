@@ -30,6 +30,11 @@ To start running the container:
 ```Bash
 $ docker-compose up -d
 ```
+<pre>
+-d, --detach               Detached mode: Run containers in the background,
+                               print new container names. Incompatible with
+                               --abort-on-container-exit.
+</pre>
 ___
 To stop the running container:
 ```Bash
