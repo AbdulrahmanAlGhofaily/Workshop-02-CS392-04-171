@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/FaisalAldarees/Workshop-02-CS392-04-171.svg?branch=main)](https://app.travis-ci.com/FaisalAldarees/Workshop-02-CS392-04-171)
+
 # Food Machine Learning tool
 
 Food Machine Learning tool is a web-based machine learning system for simple text classification.
