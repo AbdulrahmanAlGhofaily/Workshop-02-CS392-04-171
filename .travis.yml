@@ -3,5 +3,9 @@ language: node_js
 node_js:
   - node
 
+services:
+  - docker
+
 script:
-  - npm test
+  - docker build .
+  - docker run -dp 8000:8000 test
