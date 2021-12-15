@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS file-->
+    <link href="/public/css/style.css" rel="stylesheet" type="text/css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/public/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/public/favicons/favicon.ico" type="image/x-icon">
+    
+    <title>Food Machine Learning tool</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--Header-->
+      <header class="header">
+        <h1 class="header__title">Food Machine Learning tool</h1>
+        <img class="header__logo" src="/public/img/logo.jpg" alt="website logo" />
+      </header>
+
+      <!--Form-->
+      <div class="form">
+        <form action="/fasttext">
+          <label for="input-field">Enter your text to be classified:</label
+          ><br />
+          <input
+            class="form__input"
+            type="text"
+            name="inputField"
+            id="form__input"
+            placeholder="Enter text"
+          />
+          <% if (falseInput) {%>
+            <p style="font-size: 1.6rem; color: red;">Error!!!: This word cannot be classified.</p>
+          <% } %>
+
+          <div class="form__btns">
+            <button type="submit" value="Submit">SUBMIT</button>
+            <button type="reset" value="Reset">CLEAR</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Output-->
+      <div class="output">
+        <div class="output__container">
+          <!--Items-->
+          <!--Check if result array is empty or not-->
+          <% if (result.length > 0) { %>
+            <!--Loop through result array and display item for each element-->
+            <% result.forEach(element => { %>
+
+              <div class="output__item-row">
+                <div class="output__text"><%= element.value %></div>
+                <div class="output__label"><%= element.label %></div>
+              </div>
+
+            <% }) %>
+            <!--Display empty list if the array is empty-->
+            <% } else { %>
+
+              <div class="output__empty-list">&#60 Empty list &#62</div>
+
+            <% }; %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
