@@ -50,4 +50,4 @@ $ docker-compose down
 <br>
 
 # Usage
-To start using the tool, open any browser on your running machine and type `localhost:8000` in the url field. An input field should shown and two buttons submit and clear, if your input text in the text field is related to food, then a lable should be showen in front of the input text in a box just bellow the text field.
+To start using the tool, open any browser on your running machine and type `localhost:8000` in the url field. An input field should be showen and two buttons submit and clear, if your input text in the text field is related to food, then a lable should be showen in front of the input text in a box just bellow the text field.
